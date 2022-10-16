@@ -9,7 +9,9 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface FoodItemDao {
     @Query("SELECT * FROM foodItem_table")
+//    fun getAll(): List<FoodItemEntity>
     fun getAll(): Flow<List<FoodItemEntity>>
+
 
     @Insert
     fun insertAll(foodItems: List<FoodItemEntity>)

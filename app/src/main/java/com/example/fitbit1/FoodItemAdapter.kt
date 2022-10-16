@@ -1,5 +1,6 @@
 package com.example.fitbit1
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,7 +40,8 @@ class FoodItemAdapter(private val foodList: List<DisplayFoodItem>) : RecyclerVie
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Get the data model based on position
-        val foodItem = foodList.get(position)
+        val foodItem = foodList[position]
+
         // Set item views based on views and data model
         holder.itemNameTextView.text = foodItem.foodName
         holder.itemCaloriesTextView.text = foodItem.foodCalories
