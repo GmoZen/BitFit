@@ -40,6 +40,7 @@ class FoodInputActivity : AppCompatActivity() {
             // update database with new food item
             lifecycleScope.launch(IO) {
                 (application as FoodItemApplication).db.foodItemDao().insert(newEntity)
+//                (application as FoodItemApplication).db.foodItemDao().deleteAll()
             }
 
 
